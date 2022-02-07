@@ -1,0 +1,5 @@
+new_root/*
+!new_root/old_root/
+!new_root/proc/
+temp/*
+!temp/.gitempty
