@@ -27,6 +27,6 @@
 echo "Starting my first container..."
 
 echo "* Unsharing"
-unshare --ipc --mount --net --pid --time --uts --fork $PWD/mfc-bootstrap.sh
+unshare --ipc --mount --net --pid --time --user --uts --map-root-user --fork $PWD/mfc-bootstrap.sh
 
 echo "Done"

@@ -17,7 +17,7 @@ Just like My First Sony an attempt to start a container on Linux manually (witho
 |---------|--------|
 | Separate root FS | ✅ |
 | PID 1 | ✅ |
-| User mapping | |
+| User as root mapping | ✅ |
 | CGroups | |
 | Hostname | ✅ |
 | local loopback | |
