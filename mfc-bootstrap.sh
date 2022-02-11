@@ -30,6 +30,9 @@ CTR_ROOT_DIR=$PWD/ctr_root
 NEW_ROOT_DIR=$PWD/new_root
 OLD_ROOT_DIR=$NEW_ROOT_DIR/$OLD_ROOT_PATH
 
+echo "* Setting hostname"
+hostname my-first-container
+
 echo "* Mounting root"
 mount --bind "$NEW_ROOT_DIR" "$NEW_ROOT_DIR"
 cd "$NEW_ROOT_DIR"

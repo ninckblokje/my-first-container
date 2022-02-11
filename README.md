@@ -19,6 +19,6 @@ Just like My First Sony an attempt to start a container on Linux manually (witho
 | PID 1 | ✅ |
 | User mapping | |
 | CGroups | |
-| Hostname | |
+| Hostname | ✅ |
 | local loopback | |
 | Network | |
