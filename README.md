@@ -4,6 +4,7 @@ Just like My First Sony an attempt to start a container on Linux manually (witho
 
 ## Namespaces
 
+- CGROUP
 - IPC
 - Mount
 - Network
@@ -18,7 +19,8 @@ Just like My First Sony an attempt to start a container on Linux manually (witho
 | Separate root FS | ✅ |
 | PID 1 | ✅ |
 | User as root mapping | ✅ |
-| CGroups | |
+| CGroup memory max | ✅ |
+| /dev/null /dev/zero | |
 | Hostname | ✅ |
 | local loopback | |
 | Network | |

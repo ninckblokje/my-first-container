@@ -26,7 +26,18 @@
 
 echo "Starting my first container..."
 
+CGROUP_ROOT=/sys/fs/cgroup
+MFC_CGROUP=$CGROUP_ROOT/mfc
+MFC_CGROUP_MEMORY_MAX=2097152
+PID=$BASHPID
+
+echo "* Preparing cgroups for PID $PID (requires root)"
+sudo mkdir -p "$MFC_CGROUP"
+echo $MFC_CGROUP_MEMORY_MAX | sudo tee "$MFC_CGROUP/memory.max" > /dev/null
+echo $MFC_CGROUP_MEMORY_MAX | sudo tee "$MFC_CGROUP/memory.swap.max" > /dev/null
+echo $PID | sudo tee "$MFC_CGROUP/cgroup.procs" > /dev/null
+
 echo "* Unsharing"
-unshare --ipc --mount --net --pid --time --user --uts --map-root-user --fork $PWD/mfc-bootstrap.sh
+unshare --cgroup --ipc --mount --net --pid --time --user --uts --map-root-user --fork $PWD/mfc-bootstrap.sh
 
 echo "Done"
